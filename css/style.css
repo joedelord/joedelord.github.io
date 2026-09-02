@@ -1,3 +1,23 @@
+:root {
+  --bg-primary: #0d1117;
+  --bg-secondary: #10151c;
+  --bg-card: #161b22;
+  --bg-hover: #21262d;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #c9d1d9;
+  --text-muted: #8b949e;
+
+  --border: #30363d;
+  --accent: #58a6ff;
+
+  --container-width: 1100px;
+}
+
+/* =========================
+   Base
+========================= */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,9 +31,10 @@ html {
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  background: #0d1117;
-  color: #e6edf3;
   line-height: 1.6;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }
 
 h1,
@@ -22,24 +43,49 @@ h3 {
   font-weight: 700;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  min-height: 100vh;
+  padding: 6rem 2rem;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.section-title {
+  margin-bottom: 2rem;
+
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =========================
+   Navigation
+========================= */
+
 nav {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1000;
+
   width: 100%;
 
-  background: #0d1117;
-  border-bottom: 1px solid #30363d;
-
-  z-index: 1000;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border);
 }
 
 .nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 1.2rem 2rem;
 }
@@ -49,35 +95,33 @@ nav {
   font-size: 1.25rem;
   font-weight: 600;
 
-  color: #e6edf3;
-  text-decoration: none;
+  color: var(--text-primary);
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 2rem;
+
   font-weight: 500;
-
-  margin: 0;
-  padding: 0;
-
   list-style: none;
   text-transform: uppercase;
 }
 
 .nav-links a {
-  color: #e6edf3;
-  text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #58a6ff;
+  color: var(--accent);
 }
+
+/* Hamburger */
 
 .nav-toggle {
   display: none;
+
+  padding: 0.5rem;
 
   background: none;
   border: 0;
@@ -88,37 +132,37 @@ nav {
 .nav-toggle span {
   display: block;
 
-  width: 26px;
+  width: 28px;
   height: 2px;
   margin: 6px 0;
 
-  background: #e6edf3;
+  background: var(--text-primary);
 
-  transition: 0.3s;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease,
+    background 0.2s ease;
 }
 
-section {
-  padding: 5rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
 }
 
-section > * {
-  max-width: 1000px;
-  margin-inline: auto;
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
 }
 
-#hero {
-  position: relative;
-
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
+
+.nav-toggle:hover span {
+  background: var(--accent);
+}
+
+/* =========================
+   Scroll arrow
+========================= */
 
 .scroll-down {
   position: absolute;
@@ -138,12 +182,46 @@ section > * {
   border-bottom: 2px solid #afb5b9;
 
   transform: rotate(45deg);
+
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .scroll-down:hover span {
-  border-color: #58a6ff;
+  border-color: var(--accent);
+
   transform: rotate(45deg) scale(1.25);
+
   filter: drop-shadow(0 0 5px rgba(88, 166, 255, 0.5));
+}
+
+/* =========================
+   Section backgrounds
+========================= */
+
+#hero,
+#projects {
+  background: var(--bg-primary);
+}
+
+#about,
+#contact {
+  background: var(--bg-secondary);
+}
+
+/* =========================
+   Hero
+========================= */
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
 }
 
 #hero h1 {
@@ -152,31 +230,15 @@ section > * {
 
 #hero h2 {
   margin-top: 0.5rem;
+
   font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #8b949e;
+
+  color: var(--text-muted);
 }
 
 #hero p {
   margin-top: 1.5rem;
   font-size: 1.1rem;
-}
-
-#hero,
-#about,
-#projects,
-#contact {
-  position: relative;
-  min-height: 100vh;
-}
-
-#hero,
-#projects {
-  background: #0d1117;
-}
-
-#about,
-#contact {
-  background: #10151c;
 }
 
 .hero-links,
@@ -189,49 +251,30 @@ section > * {
   margin-top: 2rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 .hero-links a,
 .project-links a {
   padding: 0.75rem 1.25rem;
-  border: 1px solid #30363d;
+
+  border: 1px solid var(--border);
   border-radius: 6px;
 
-  transition: 0.2s;
+  transition: background 0.2s ease;
 }
 
 .hero-links a:hover,
 .project-links a:hover {
-  background: #21262d;
+  background: var(--bg-hover);
 }
 
-section > h2 {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.section-title {
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  text-transform: uppercase;
-  text-align: center;
-}
+/* =========================
+   About
+========================= */
 
 #about {
-  position: relative;
-
-  min-height: 100vh;
-  scroll-margin-top: 0;
-
   display: flex;
   align-items: center;
 
-  padding: 6rem 2rem;
+  scroll-margin-top: 0;
 }
 
 .about-card {
@@ -241,22 +284,24 @@ section > h2 {
   gap: 4rem;
 
   width: 100%;
-  max-width: 1100px;
-
+  max-width: var(--container-width);
   margin: 0 auto;
   padding: 3rem;
 
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
   border-radius: 16px;
 }
 
 .about-image img {
   display: block;
+
   width: 100%;
   aspect-ratio: 1 / 1;
 
   object-fit: cover;
+
   border-radius: 12px;
 }
 
@@ -267,8 +312,10 @@ section > h2 {
 
 .about-content p {
   margin-bottom: 1rem;
-  color: #c9d1d9;
+  color: var(--text-secondary);
 }
+
+/* Technologies */
 
 .technologies {
   margin-top: 2rem;
@@ -291,22 +338,25 @@ section > h2 {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.85rem;
 
-  background: #0d1117;
-  border: 1px solid #30363d;
+  background: var(--bg-primary);
+
+  border: 1px solid var(--border);
   border-radius: 6px;
 }
+
+/* =========================
+   Projects
+========================= */
 
 #projects {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 6rem 2rem;
 }
 
 .projects-container {
   width: 100%;
-  max-width: 1100px;
+  max-width: var(--container-width);
   margin: 0 auto;
 }
 
@@ -319,8 +369,9 @@ section > h2 {
 .project-card {
   padding: 2rem;
 
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
   border-radius: 10px;
 }
 
@@ -331,16 +382,18 @@ section > h2 {
 
 .project-tech {
   margin-top: 1rem;
-  color: #8b949e;
+  color: var(--text-muted);
 }
+
+/* =========================
+   Contact
+========================= */
 
 #contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
-  padding: 6rem 2rem;
+  justify-content: center;
 
   text-align: center;
 }
@@ -351,11 +404,7 @@ section > h2 {
 }
 
 .contact-links {
-  display: flex;
-  justify-content: center;
   gap: 3rem;
-
-  margin-top: 2rem;
 }
 
 .contact-links a {
@@ -364,12 +413,9 @@ section > h2 {
   align-items: center;
   gap: 0.5rem;
 
-  color: #e6edf3;
-  text-decoration: none;
-
   transition:
-    color 0.2s,
-    transform 0.2s;
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .contact-links i {
@@ -377,9 +423,13 @@ section > h2 {
 }
 
 .contact-links a:hover {
-  color: #58a6ff;
+  color: var(--accent);
   transform: translateY(-4px);
 }
+
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width: 768px) {
   .nav-toggle {
@@ -397,8 +447,9 @@ section > h2 {
     width: 100%;
     padding: 2rem;
 
-    background: #0d1117;
-    border-bottom: 1px solid #30363d;
+    background: var(--bg-primary);
+
+    border-bottom: 1px solid var(--border);
   }
 
   .nav-links.active {
@@ -408,6 +459,11 @@ section > h2 {
   #hero h1 {
     font-size: clamp(2.8rem, 13vw, 4.5rem);
     line-height: 1.1;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    align-items: center;
   }
 
   .about-card {
@@ -424,10 +480,5 @@ section > h2 {
 
   .project-grid {
     grid-template-columns: 1fr;
-  }
-
-  .hero-links {
-    flex-direction: column;
-    align-items: center;
   }
 }
