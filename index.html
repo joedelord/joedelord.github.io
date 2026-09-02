@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Jouni Seppänen | Full Stack Developer</title>
+  </head>
+
+  <body>
+    <nav aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo" aria-label="Back to home">
+          &lt;JS /&gt;
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section id="hero">
+        <h1>Jouni Seppänen</h1>
+        <h2>Full Stack / Software Developer</h2>
+
+        <p>
+          I build practical web applications with modern frontend and backend
+          technologies.
+        </p>
+
+        <div class="hero-links">
+          <a href="#projects">View Projects</a>
+          <a
+            href="https://github.com/joedelord"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jouni-sepp%C3%A4nen-60834b249/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </div>
+
+        <a
+          href="#about"
+          class="scroll-down"
+          aria-label="Scroll to About section"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <section id="about">
+        <div class="about-card">
+          <div class="about-image">
+            <img src="img/jouni.webp" alt="Jouni Seppänen" />
+          </div>
+
+          <div class="about-content">
+            <h2>About Me</h2>
+
+            <p>
+              I'm a software developer with a hands-on background in full-stack
+              web development. I enjoy building practical applications and
+              turning ideas into working solutions, from user interfaces and
+              APIs to databases and backend logic.
+            </p>
+
+            <p>
+              Through my own projects, I've gained experience in designing,
+              developing and testing complete web applications.
+            </p>
+
+            <div class="technologies" id="technologies">
+              <h3>Technologies</h3>
+
+              <div class="technology-list">
+                <span>JavaScript</span>
+                <span>React.js</span>
+                <span>Node.js</span>
+                <span>Python</span>
+                <span>Django</span>
+                <span>PHP</span>
+                <span>PostgreSQL</span>
+                <span>MySQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Tailwind CSS</span>
+                <span>Bootstrap</span>
+                <span>REST APIs</span>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          href="#projects"
+          class="scroll-down"
+          aria-label="Scroll to Projects section"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <section id="projects">
+        <div class="projects-container">
+          <h2 class="section-title">Selected Projects</h2>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>React Node PostgreSQL Auth</h3>
+
+              <p>Full-stack authentication and user management application.</p>
+
+              <p class="project-tech">React • Node.js • PostgreSQL</p>
+
+              <div class="project-links">
+                <a href="#">Live Demo</a>
+                <a href="#">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h3>HIFK Web Application</h3>
+
+              <p>
+                Full-stack hockey web application for managing players, matches
+                and seasons.
+              </p>
+
+              <p class="project-tech">React • Node.js • PostgreSQL</p>
+
+              <div class="project-links">
+                <a href="#">GitHub</a>
+                <a href="#">More Info</a>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h3>I Want My Shoe Back</h3>
+
+              <p>Responsive website for a punk rock band.</p>
+
+              <p class="project-tech">HTML • PHP • JavaScript • Bootstrap</p>
+
+              <div class="project-links">
+                <a href="#">Live Site</a>
+                <a href="#">GitHub</a>
+              </div>
+            </article>
+          </div>
+        </div>
+        <a
+          href="#contact"
+          class="scroll-down"
+          aria-label="Scroll to Contact section"
+        >
+          <span></span>
+        </a>
+      </section>
+
+      <section id="contact">
+        <div class="contact-container">
+          <h2 class="section-title">Contact</h2>
+
+          <p>Feel free to get in touch or connect with me.</p>
+
+          <div class="contact-links">
+            <a href="mailto:jouni.seppanen.dev@proton.me">
+              <i class="bi bi-envelope"></i>
+              <span>Email</span>
+            </a>
+
+            <a
+              href="https://github.com/joedelord"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-github"></i>
+              <span>GitHub</span>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jouni-sepp%C3%A4nen-60834b249/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bi bi-linkedin"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

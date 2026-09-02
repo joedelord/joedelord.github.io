@@ -1,0 +1,428 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  background: #0d1117;
+  color: #e6edf3;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  background: #0d1117;
+  border-bottom: 1px solid #30363d;
+
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
+}
+
+.nav-logo {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.25rem;
+  font-weight: 600;
+
+  color: #e6edf3;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 500;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  color: #e6edf3;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #58a6ff;
+}
+
+.nav-toggle {
+  display: none;
+
+  background: none;
+  border: 0;
+
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+
+  width: 26px;
+  height: 2px;
+  margin: 6px 0;
+
+  background: #e6edf3;
+
+  transition: 0.3s;
+}
+
+section {
+  padding: 5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+section > * {
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+#hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.scroll-down span {
+  display: block;
+
+  width: 20px;
+  height: 20px;
+
+  border-right: 2px solid #afb5b9;
+  border-bottom: 2px solid #afb5b9;
+
+  transform: rotate(45deg);
+}
+
+.scroll-down:hover span {
+  border-color: #58a6ff;
+  transform: rotate(45deg) scale(1.25);
+  filter: drop-shadow(0 0 5px rgba(88, 166, 255, 0.5));
+}
+
+#hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+#hero h2 {
+  margin-top: 0.5rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: #8b949e;
+}
+
+#hero p {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+#hero,
+#about,
+#projects,
+#contact {
+  position: relative;
+  min-height: 100vh;
+}
+
+#hero,
+#projects {
+  background: #0d1117;
+}
+
+#about,
+#contact {
+  background: #10151c;
+}
+
+.hero-links,
+.project-links,
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hero-links a,
+.project-links a {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+
+  transition: 0.2s;
+}
+
+.hero-links a:hover,
+.project-links a:hover {
+  background: #21262d;
+}
+
+section > h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#about {
+  position: relative;
+
+  min-height: 100vh;
+  scroll-margin-top: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 6rem 2rem;
+}
+
+.about-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: center;
+  gap: 4rem;
+
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+  padding: 3rem;
+
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 16px;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about-content h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+  color: #c9d1d9;
+}
+
+.technologies {
+  margin-top: 2rem;
+}
+
+.technologies h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.technology-list span {
+  padding: 0.4rem 0.8rem;
+
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 6rem 2rem;
+}
+
+.projects-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project-card {
+  padding: 2rem;
+
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+
+.project-tech {
+  margin-top: 1rem;
+  color: #8b949e;
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 6rem 2rem;
+
+  text-align: center;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 700px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+
+  margin-top: 2rem;
+}
+
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+
+  color: #e6edf3;
+  text-decoration: none;
+
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.contact-links i {
+  font-size: 2.5rem;
+}
+
+.contact-links a:hover {
+  color: #58a6ff;
+  transform: translateY(-4px);
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: none;
+    flex-direction: column;
+
+    width: 100%;
+    padding: 2rem;
+
+    background: #0d1117;
+    border-bottom: 1px solid #30363d;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    padding: 2rem;
+  }
+
+  .about-image {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 800px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
