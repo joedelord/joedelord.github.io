@@ -116,6 +116,8 @@ section > * {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  text-align: center;
 }
 
 .scroll-down {
@@ -403,6 +405,11 @@ section > h2 {
     display: flex;
   }
 
+  #hero h1 {
+    font-size: clamp(2.8rem, 13vw, 4.5rem);
+    line-height: 1.1;
+  }
+
   .about-card {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -414,9 +421,7 @@ section > h2 {
     max-width: 220px;
     margin: 0 auto;
   }
-}
 
-@media (max-width: 800px) {
   .project-grid {
     grid-template-columns: 1fr;
   }
