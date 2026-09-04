@@ -151,8 +151,15 @@
               </p>
 
               <div class="project-links">
-                <a href="#">Demo</a>
+                <button
+                  class="project-button demo-button"
+                  data-demo="auth-demo"
+                >
+                  Demo
+                </button>
+
                 <a
+                  class="project-button"
                   href="https://github.com/joedelord/react-node-postgres-auth-template"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -176,6 +183,7 @@
 
               <div class="project-links">
                 <a
+                  class="project-button"
                   href="https://restaurant-app-two-red.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -183,6 +191,7 @@
                   Live Site
                 </a>
                 <a
+                  class="project-button"
                   href="https://github.com/joedelord/restaurant-app"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -209,6 +218,7 @@
 
               <div class="project-links">
                 <a
+                  class="project-button"
                   href="https://plantor.infinityfreeapp.com/plantor/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -262,6 +272,30 @@
         </div>
       </section>
     </main>
+
+    <!-- Demo modal-->
+
+    <div
+      class="demo-modal"
+      id="auth-demo"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="auth-demo-title"
+      hidden
+    >
+      <div class="demo-modal-content">
+        <button class="demo-modal-close" type="button" aria-label="Close demo">
+          &times;
+        </button>
+
+        <h2 id="auth-demo-title">React Node PostgreSQL Auth</h2>
+
+        <video class="demo-video" controls muted playsinline>
+          <source src="video/auth-demo.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
   </body>

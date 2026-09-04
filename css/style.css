@@ -251,18 +251,30 @@ nav {
   margin-top: 2rem;
 }
 
-.hero-links a,
-.project-links a {
+.hero-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   padding: 0.75rem 1.25rem;
+
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+
+  color: inherit;
+  background: transparent;
 
   border: 1px solid var(--border);
   border-radius: 6px;
 
+  cursor: pointer;
+
   transition: background 0.2s ease;
 }
 
-.hero-links a:hover,
-.project-links a:hover {
+.hero-links a:hover {
   background: var(--bg-hover);
 }
 
@@ -431,25 +443,32 @@ nav {
   margin-top: auto;
 }
 
-.project-links a {
-  padding: 0.5rem 0.9rem;
+.project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-  border: 1px solid #30363d;
-  border-radius: 6px;
+  padding: 0.75rem 1.25rem;
 
-  color: #e6edf3;
+  font: inherit;
   font-size: 0.875rem;
   font-weight: 600;
-  text-decoration: none;
+  line-height: 1.6;
 
-  transition:
-    background 0.2s ease,
-    border-color 0.2s ease;
+  color: inherit;
+  background: transparent;
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  cursor: pointer;
+  appearance: none;
+
+  transition: background 0.2s ease;
 }
 
-.project-links a:hover {
-  background: #21262d;
-  border-color: #8b949e;
+.project-button:hover {
+  background: var(--bg-hover);
 }
 
 /* =========================
@@ -492,6 +511,81 @@ nav {
 .contact-links a:hover {
   color: var(--accent);
   transform: translateY(-4px);
+}
+
+/* =========================
+   Demo-modal
+========================= */
+
+.demo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+.demo-modal[hidden] {
+  display: none;
+}
+
+.demo-modal-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.demo-modal-content h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.demo-video {
+  display: block;
+
+  width: 100%;
+  max-height: 75vh;
+
+  background: #000;
+
+  border-radius: 8px;
+}
+
+.demo-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+
+  padding: 0.25rem;
+
+  font-size: 2rem;
+  line-height: 1;
+
+  color: var(--text-primary);
+  background: none;
+  border: 0;
+
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.demo-modal-close:hover {
+  color: var(--accent);
 }
 
 /* =========================
