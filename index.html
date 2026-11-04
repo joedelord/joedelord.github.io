@@ -13,7 +13,23 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <title>Jouni Seppänen | Full Stack Developer</title>
+    <title>Jouni Seppänen | Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Jouni Seppänen – full-stack developer in Helsinki. React, Node.js, Django, PHP and PostgreSQL."
+    />
+    <meta property="og:title" content="Jouni Seppänen | Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-stack developer in Helsinki. React, Node.js, Django, PHP and PostgreSQL."
+    />
+    <meta
+      property="og:image"
+      content="https://joedelord.github.io/img/og-image.png"
+    />
+    <meta property="og:url" content="https://joedelord.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
 
   <body>
@@ -46,11 +62,14 @@
     <main>
       <section id="hero">
         <h1>Jouni Seppänen</h1>
-        <h2>Full Stack / Software Developer</h2>
+        <h2>Full-Stack Developer</h2>
 
         <p>
-          I build practical web applications with modern frontend and backend
-          technologies.
+          I build web applications end to end, from database design and APIs to
+          the interface people actually use. For four years I was the sole
+          developer and co-founder of a two-person company, delivering client
+          applications and our own platform. I'm currently open to full-stack
+          and web developer roles in Helsinki or remote.
         </p>
 
         <div class="hero-links">
@@ -88,36 +107,97 @@
             <h2 class="section-title">About Me</h2>
 
             <p>
-              I'm a software developer with a hands-on background in full-stack
-              web development. I enjoy building practical applications and
-              turning ideas into working solutions, from user interfaces and
-              APIs to databases and backend logic.
+              I first studied IT back in 2002, but my path into software really
+              started in 2017, when I started teaching myself web development
+              through my own projects. In 2020 I moved into formal studies at
+              Haaga-Helia, Metropolia and Omnia, followed by an internship as a
+              full-stack developer at Jippo f-Commerce, where I built user-facing
+              and authentication-protected admin interfaces.
             </p>
-
             <p>
-              Through my own projects, I've gained experience in designing,
-              developing and testing complete web applications.
+              From 2022 to 2026 I ran Plantor Oy together with a business
+              partner. In our two-person company I was responsible for all
+              development, from requirements to delivery: I built PHP/MySQL
+              feedback forms and login systems for client companies, and turned
+              my partner's designs into our own website, including a
+              customer-facing forest growth tracking service and an admin panel
+              for orders and their tracking information. Alongside development,
+              I shared customer communication and business administration.
             </p>
+            <p>
+              Since then I've focused on modern full-stack development with
+              React, Node.js, Django and PostgreSQL, with authentication,
+              validation and testing built in from the start rather than added
+              later.
+            </p>
+            <p>
+              Between my IT studies and software development, I spent ten years
+              in logistics. That taught me to
+              work accurately under pressure and to sort out problems on the
+              spot, which turns out to be useful in debugging too.
+            </p>
+          </div>
 
+          <div class="about-details">
             <div class="technologies" id="technologies">
               <h3>Technologies</h3>
 
               <div class="technology-list">
                 <span>JavaScript</span>
-                <span>React.js</span>
+                <span>React</span>
                 <span>Node.js</span>
+                <span>Express</span>
                 <span>Python</span>
                 <span>Django</span>
                 <span>PHP</span>
                 <span>PostgreSQL</span>
                 <span>MySQL</span>
+                <span>REST APIs</span>
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Tailwind CSS</span>
                 <span>Bootstrap</span>
-                <span>REST APIs</span>
+                <span>JWT</span>
+                <span>Zod</span>
+                <span>Vitest</span>
+                <span>React Testing Library</span>
+                <span>Supertest</span>
                 <span>Git</span>
+                <span>Postman</span>
+                <span>Linux</span>
+                <span>TypeScript (basic)</span>
+                <span>Docker (basic)</span>
               </div>
+            </div>
+
+            <div class="education">
+              <h3>Education &amp; Certification</h3>
+
+              <dl class="education-list">
+                <dt>2026</dt>
+                <dd>IT Specialist – Python, Pearson certification</dd>
+
+                <dt>2025–26</dt>
+                <dd>
+                  Partial Vocational Qualification in ICT, Taitotalo –
+                  Programming; Working as a Software Developer
+                </dd>
+
+                <dt>2021–22</dt>
+                <dd>
+                  Partial Vocational Qualification in ICT, Omnia – Software
+                  Design &amp; Project Management
+                </dd>
+
+                <dt>2020–22</dt>
+                <dd>Software development studies, Haaga-Helia and Metropolia</dd>
+
+                <dt>1999–2002</dt>
+                <dd>
+                  Vocational Qualification in Information Technology, Helsingin
+                  Tekniikan Alan Oppilaitos
+                </dd>
+              </dl>
             </div>
           </div>
         </div>
@@ -136,18 +216,60 @@
 
           <div class="project-grid">
             <article class="project-card">
+              <span class="project-badge">Full-Stack Project · In Development</span>
+
+              <h3>Stock Market AI Agent</h3>
+
+              <p>
+                Market monitoring app for Helsinki, US and European stocks. A
+                scheduled job collects 15-minute price data during each
+                exchange's trading hours, users build their own watchlists and
+                price alerts, and an LLM generates analysis of price movements.
+              </p>
+
+              <ul class="project-features">
+                <li>
+                  Scheduler that respects local trading hours, daylight saving
+                  time and market holidays
+                </li>
+                <li>
+                  User-specific watchlists and configurable alerts (e.g. +3%
+                  daily move)
+                </li>
+                <li>AI analysis via Groq, built on my own auth template</li>
+              </ul>
+
+              <p class="project-tech">
+                React • Node.js • Express • PostgreSQL • Twelve Data API • Groq
+              </p>
+            </article>
+
+            <article class="project-card">
               <span class="project-badge">Full-Stack Template</span>
 
               <h3>React Node PostgreSQL Auth</h3>
 
               <p>
-                Reusable full-stack authentication and user management template
-                with role-based access control, protected routes, validation,
-                and automated testing.
+                Reusable authentication and user management template that I use
+                as the starting point for my own projects.
               </p>
 
+              <ul class="project-features">
+                <li>
+                  JWT in HttpOnly cookies, user/moderator/admin roles and
+                  protected routes
+                </li>
+                <li>
+                  Zod validation, Helmet, rate limiting and database migrations
+                </li>
+                <li>
+                  Backend and frontend tests with Vitest and React Testing
+                  Library
+                </li>
+              </ul>
+
               <p class="project-tech">
-                React • Node.js • Express • PostgreSQL • Vitest
+                React • Node.js • Express • PostgreSQL • Zod • Helmet • Vitest
               </p>
 
               <div class="project-links">
@@ -175,11 +297,14 @@
               <h3>Restaurant Reservation & Management System</h3>
 
               <p>
-                Full-stack restaurant reservation and management application
-                with a React frontend and Django backend.
+                Reservation and management application with a React frontend, a
+                Django REST backend and a PostgreSQL database, deployed on
+                Vercel.
               </p>
 
-              <p class="project-tech">React • Django • PostgreSQL</p>
+              <p class="project-tech">
+                React • Django • PostgreSQL • Tailwind CSS
+              </p>
 
               <div class="project-links">
                 <a
@@ -207,13 +332,14 @@
               <h3>Plantor</h3>
 
               <p>
-                Business website designed and developed for my own company,
-                including frontend development and database-driven backend
-                functionality.
+                Company website I built for Plantor Oy based on my business
+                partner's design. It includes a customer-facing service for
+                following the growth of their forest, and a custom admin panel
+                for managing orders and their tracking information.
               </p>
 
               <p class="project-tech">
-                PHP • MySQL • JavaScript • HTML • Bootstrap
+                PHP • MySQL • JavaScript • Axios • Bootstrap
               </p>
 
               <div class="project-links">
@@ -243,7 +369,14 @@
         <div class="contact-container">
           <h2 class="section-title">Contact</h2>
 
-          <p>Feel free to get in touch or connect with me.</p>
+          <p>
+            Open to full-stack and web developer roles in Helsinki or remote.
+            The easiest way to reach me is by email.
+          </p>
+
+          <a class="contact-email" href="mailto:jouni.seppanen.dev@proton.me">
+            jouni.seppanen.dev@proton.me
+          </a>
 
           <div class="contact-links">
             <a href="mailto:jouni.seppanen.dev@proton.me">
