@@ -153,6 +153,8 @@
                 <span>PostgreSQL</span>
                 <span>MySQL</span>
                 <span>REST APIs</span>
+                <span>LLM APIs (Groq)</span>
+                <span>AI-assisted development (Claude)</span>
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>Tailwind CSS</span>
@@ -221,27 +223,37 @@
               <h3>Stock Market AI Agent</h3>
 
               <p>
-                Market monitoring app for Helsinki, US and European stocks. A
-                scheduled job collects 15-minute price data during each
-                exchange's trading hours, users build their own watchlists and
-                price alerts, and an LLM generates analysis of price movements.
+                Stock monitoring app for US markets with watchlists, price
+                alerts and LLM-generated analysis. Designed to support Helsinki
+                and European exchanges as well.
               </p>
 
               <ul class="project-features">
                 <li>
-                  Scheduler that respects local trading hours, daylight saving
-                  time and market holidays
+                  Scheduler aware of trading hours, DST and market holidays
                 </li>
+                <li>Watchlists and configurable alerts, AI analysis via Groq</li>
                 <li>
-                  User-specific watchlists and configurable alerts (e.g. +3%
-                  daily move)
+                  Built with Claude as a coding assistant; architecture, review
+                  and testing by me
                 </li>
-                <li>AI analysis via Groq, built on my own auth template</li>
               </ul>
 
               <p class="project-tech">
-                React • Node.js • Express • PostgreSQL • Twelve Data API • Groq
+                React • Node.js • Express • PostgreSQL • Twelve Data • Groq •
+                Claude
               </p>
+
+              <div class="project-links">
+                <a
+                  class="project-button"
+                  href="https://github.com/joedelord/stock-market-ai-agent"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </div>
             </article>
 
             <article class="project-card">
